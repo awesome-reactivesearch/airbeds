@@ -1,0 +1,21 @@
+{
+  "name": "airbeds",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "1.0.17"
+  },
+  "dependencies": {
+    "@appbaseio/reactivesearch": "^2.0.0-beta-01",
+    "create-react-app": "^1.4.3",
+    "global": "^4.3.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
