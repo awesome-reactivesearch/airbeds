@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ReactiveBase, NumberBox, DateRange, RangeSlider, ResultCard } from '@appbaseio/reactivesearch';
+import { ReactiveBase, DataSearch, NumberBox, DateRange, RangeSlider, ResultCard } from '@appbaseio/reactivesearch';
 
 import './App.css';
 
@@ -14,7 +14,16 @@ export default () => (
             }}
         >
             <nav className="nav">
-                <div className="title">airbeds</div>
+                <div className="title">Airbeds</div>
+                <DataSearch
+                    componentId="SearchSensor"
+                    dataField="name"
+                    autosuggest={false}
+                    placeholder="Search by house names"
+                    iconPosition="left"
+                    className="search"
+                    highlight={true}
+                />
             </nav>
             <div className="left-col">
                 <DateRange
@@ -80,7 +89,7 @@ export default () => (
                 })}
                 pagination
                 react={{
-                    and: ['GuestSensor', 'PriceSensor', 'DateRangeSensor', 'search'],
+                    and: ['SearchSensor', 'GuestSensor', 'PriceSensor', 'DateRangeSensor', 'search'],
                 }}
                 innerClass={{
                     resultStats: 'result-stats',

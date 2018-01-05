@@ -16,6 +16,11 @@
   height: 52px;
   padding: 0 25px;
 }
+.container .nav .search {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 .container .left-col {
   width: 320px;
   height: 100%;
