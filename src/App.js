@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
-import { ReactiveBase, DataSearch, NumberBox, DateRange, RangeSlider, ResultCard } from '@appbaseio/reactivesearch';
+import React from 'react';
+import { ReactiveBase, DataSearch, NumberBox, DateRange, RangeSlider, ResultCard, ReactiveList } from '@appbaseio/reactivesearch';
 
 import './App.css';
+
+const { ResultCardsWrapper } = ReactiveList;
 
 export default () => (
     <div className="container">
@@ -70,22 +72,11 @@ export default () => (
                 />
             </div>
 
-            <ResultCard
+            <ReactiveList
                 className="right-col"
                 componentId="SearchResult"
                 dataField="name"
                 size={12}
-                onData={data => ({
-                    image: data.image,
-                    title: data.name,
-                    description: (
-                        <div>
-                            <div className="price">${data.price}</div>
-                            <p className="info">{data.room_type} · {data.accommodates} guests</p>
-                        </div>
-                    ),
-                    url: data.listing_url,
-                })}
                 pagination
                 react={{
                     and: ['SearchSensor', 'GuestSensor', 'PriceSensor', 'DateRangeSensor', 'search'],
@@ -96,6 +87,25 @@ export default () => (
                     listItem: 'list-item',
                     image: 'image',
                 }}
+                render={({ data }) => <ResultCardsWrapper>{
+                    data.map(item => (
+                        <ResultCard key={item.id}>
+                            <ResultCard.Image src={item.image}/>
+                            <ResultCard.Title
+                                dangerouslySetInnerHTML={{
+                                    __html: item.name
+                                }}
+                            />
+                            <ResultCard.Description>
+                                <div>
+                                    <div className="price">${item.price}</div>
+                                    <p className="info">{item.room_type} · {item.accommodates} guests</p>
+                                </div>
+                            </ResultCard.Description>
+                        </ResultCard>
+                    ))
+                }
+                </ResultCardsWrapper>}
             />
         </ReactiveBase>
     </div>
