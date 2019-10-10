@@ -87,25 +87,26 @@ export default () => (
                     listItem: 'list-item',
                     image: 'image',
                 }}
-                render={({ data }) => <ResultCardsWrapper>{
-                    data.map(item => (
-                        <ResultCard key={item.id}>
-                            <ResultCard.Image src={item.image}/>
-                            <ResultCard.Title
-                                dangerouslySetInnerHTML={{
-                                    __html: item.name
-                                }}
-                            />
-                            <ResultCard.Description>
-                                <div>
-                                    <div className="price">${item.price}</div>
-                                    <p className="info">{item.room_type} · {item.accommodates} guests</p>
-                                </div>
-                            </ResultCard.Description>
-                        </ResultCard>
-                    ))
-                }
-                </ResultCardsWrapper>}
+                render={({ data }) => (
+                    <ResultCardsWrapper>
+                        {data.map(item => (
+                            <ResultCard href={item.listing_url} key={item._id}>
+                                <ResultCard.Image src={item.image}/>
+                                <ResultCard.Title
+                                    dangerouslySetInnerHTML={{
+                                        __html: item.name
+                                    }}
+                                />
+                                <ResultCard.Description>
+                                    <div>
+                                        <div className="price">${item.price}</div>
+                                        <p className="info">{item.room_type} · {item.accommodates} guests</p>
+                                    </div>
+                                </ResultCard.Description>
+                            </ResultCard>
+                        ))}
+                    </ResultCardsWrapper>
+                )}
             />
         </ReactiveBase>
     </div>
