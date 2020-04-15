@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@appbaseio/reactivecore@9.5.2":
-  version "9.5.2"
-  resolved "https://registry.yarnpkg.com/@appbaseio/reactivecore/-/reactivecore-9.5.2.tgz#e7cf66042f4b727dc2b1eaaa308e1393e0d85164"
-  integrity sha512-g6MSk+5BYEUJS+f5QSuF1m/tfiZucD05VwZf/fEqJZ2hzV6Xc2ctQsWsjzoH1A2og9ZSvLMrI9scheX8DV8+qw==
+"@appbaseio/reactivecore@9.5.3":
+  version "9.5.3"
+  resolved "https://registry.yarnpkg.com/@appbaseio/reactivecore/-/reactivecore-9.5.3.tgz#c067066225b5148f19faa01808f19d5d75a95833"
+  integrity sha512-wVwnLIcOAyF737ZTAXt81OjC9qzUP/qoGBBAezoHIvQnfSUpgRJFnucUXwJew4gNTI3zhEpjbKx2k9R8l5yb2Q==
   dependencies:
     cross-fetch "^3.0.4"
     prop-types "^15.6.0"
@@ -13,12 +13,12 @@
     redux-thunk "^2.3.0"
     xdate "^0.8.2"
 
-"@appbaseio/reactivesearch@^3.7.10":
-  version "3.7.10"
-  resolved "https://registry.yarnpkg.com/@appbaseio/reactivesearch/-/reactivesearch-3.7.10.tgz#0003e918c685653cf42efdef41b298c714935637"
-  integrity sha512-dsNPESaTK6YmoR5oZJlgiiNwzmWbgCYueVTNkHbBH/MpVgU2OUtwTs/woC2zTq7RGZsXwH9wzVcLcOBOoEXwcg==
+"@appbaseio/reactivesearch@^3.7.11":
+  version "3.7.11"
+  resolved "https://registry.yarnpkg.com/@appbaseio/reactivesearch/-/reactivesearch-3.7.11.tgz#3fff86b93a1abaf6de4bcf884c8421fc676500d8"
+  integrity sha512-gpChz+38TwXUgZejsWCbfVkErvTc5NuoZo4v1WM4nLbh0k4AU4Kzdf6Elh3D40jNPEUCo0ffDX/dXb6zK4BRLA==
   dependencies:
-    "@appbaseio/reactivecore" "9.5.2"
+    "@appbaseio/reactivecore" "9.5.3"
     appbase-js "4.0.2"
     cross-env "^5.2.0"
     downshift "^1.31.2"
@@ -4706,6 +4706,11 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 ms@2.0.0:
   version "2.0.0"

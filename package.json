@@ -8,9 +8,10 @@
     "react-scripts": "1.0.17"
   },
   "dependencies": {
-    "@appbaseio/reactivesearch": "^3.7.10",
+    "@appbaseio/reactivesearch": "^3.7.11",
     "create-react-app": "^1.4.3",
     "global": "^4.3.2",
+    "moment": "^2.24.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
   },
