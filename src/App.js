@@ -23,7 +23,7 @@ export default () => (
       }}
     >
       <nav className="nav">
-        <div className="title">Airbeds</div>
+        <div className="navbar-title">Airbeds</div>
         <SearchBox
           componentId="SearchSensor"
           dataField="name"
