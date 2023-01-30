@@ -1,9 +1,8 @@
 import React from "react";
 import {
   ReactiveBase,
-  DataSearch,
+  SearchBox,
   NumberBox,
-  DateRange,
   RangeSlider,
   ResultCard,
   ReactiveList,
@@ -25,7 +24,7 @@ export default () => (
     >
       <nav className="nav">
         <div className="title">Airbeds</div>
-        <DataSearch
+        <SearchBox
           componentId="SearchSensor"
           dataField="name"
           autosuggest={false}
